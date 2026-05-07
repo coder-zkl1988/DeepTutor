@@ -1,6 +1,6 @@
-# DeepTutor Desktop
+# HappyOwl Desktop
 
-Desktop application for DeepTutor.
+Desktop application for HappyOwl.
 
 ## Development
 

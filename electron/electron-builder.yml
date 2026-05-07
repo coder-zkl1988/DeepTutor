@@ -1,5 +1,6 @@
-appId: com.deeptutor.desktop
-productName: DeepTutor
+# Derived from DeepTutor (Apache 2.0) — modified for HappyOwl desktop shell.
+appId: com.happyowl.desktop
+productName: HappyOwl
 directories:
   buildResources: build
   output: dist
@@ -13,7 +14,8 @@ asarUnpack:
   - resources/**
   - "**/*.py"
 win:
-  executableName: DeepTutor
+  icon: build/icon.png
+  executableName: HappyOwl
   target:
     - target: nsis
       arch:
@@ -24,10 +26,11 @@ nsis:
   uninstallDisplayName: "${productName}"
   createDesktopShortcut: always
 mac:
+  icon: build/icon.png
   entitlementsInherit: build/entitlements.mac.plist
   extendInfo:
-    - NSCameraUsageDescription: DeepTutor needs camera access for video calls
-    - NSMicrophoneUsageDescription: DeepTutor needs microphone access for voice input
+    - NSCameraUsageDescription: HappyOwl needs camera access for video calls
+    - NSMicrophoneUsageDescription: HappyOwl needs microphone access for voice input
   notarize: false
   target:
     - target: dmg
@@ -37,6 +40,7 @@ mac:
 dmg:
   artifactName: "${name}-${version}.${ext}"
 linux:
+  icon: build/icon.png
   target:
     - AppImage
     - snap

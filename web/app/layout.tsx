@@ -1,40 +1,46 @@
-import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
-import { AppShellProvider } from "@/context/AppShellContext";
-import { I18nClientBridge } from "@/i18n/I18nClientBridge";
+// Derived from DeepTutor (Apache 2.0) — modified for HappyOwl.
+import type { Metadata } from 'next'
+import { Inter, JetBrains_Mono } from 'next/font/google'
+import './globals.css'
+import { AppShellProvider } from '@/context/AppShellContext'
+import { I18nClientBridge } from '@/i18n/I18nClientBridge'
 
 const fontSans = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-sans",
-});
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+})
 
 const fontMono = JetBrains_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-mono",
-});
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mono',
+})
 
 export const metadata: Metadata = {
-  title: "DeepTutor",
-  description: "Agent-native intelligent learning companion",
+  title: 'HappyOwl',
+  description: 'Agent-native intelligent learning companion',
   icons: {
     icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: '/apple-touch-icon.png',
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth"       className={`${fontSans.variable} ${fontMono.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
+      className={`${fontSans.variable} ${fontMono.variable}`}
+    >
       <body className="font-sans bg-[var(--background)] text-[var(--foreground)]">
         <AppShellProvider>
           <I18nClientBridge>{children}</I18nClientBridge>
@@ -46,5 +52,5 @@ export default function RootLayout({
         />
       </body>
     </html>
-  );
+  )
 }

@@ -1,3 +1,4 @@
+// Derived from DeepTutor (Apache 2.0) — modified for HappyOwl.
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -105,11 +106,7 @@ export default function TitleBar() {
             />
           </div>
         )}
-        {!isMac && (
-          <span className="text-sm font-semibold text-[var(--foreground)]">
-            DeepTutor
-          </span>
-        )}
+        {!isMac && <span className="text-sm font-semibold text-[var(--foreground)]">HappyOwl</span>}
       </div>
 
       {/* Center: Draggable area (Windows shows title here) */}

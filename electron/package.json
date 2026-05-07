@@ -1,7 +1,7 @@
 {
-  "name": "deeptutor-desktop",
+  "name": "happyowl-desktop",
   "version": "1.0.0",
-  "description": "DeepTutor - Agent-Native Personalized Tutoring",
+  "description": "HappyOwl - Agent-Native Personalized Tutoring",
   "main": "./out/main/index.js",
   "author": "HKUDS",
   "license": "Apache-2.0",

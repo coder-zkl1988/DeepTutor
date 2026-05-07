@@ -1,3 +1,4 @@
+// Derived from DeepTutor (Apache 2.0) — modified for HappyOwl desktop shell.
 'use client'
 
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
@@ -196,7 +197,7 @@ export function SidebarShell({
     <div className={`flex h-full relative overflow-hidden ${workspace ? 'w-full' : ''}`}>
       <aside
         className={clsx(
-          'flex h-full shrink-0 flex-col transition-all duration-200',
+          'flex h-full shrink-0 flex-col transition-all duration-200 border-r border-[var(--border)]',
           isDesktopClient ? 'bg-transparent' : 'bg-[var(--secondary)]'
         )}
         style={
